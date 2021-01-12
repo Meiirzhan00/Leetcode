@@ -1,1 +1,1 @@
-# Leetcode taks
+# Leetcode tasks
