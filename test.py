@@ -1,19 +1,40 @@
 class Solution:
-    def reverse(self, x: int) -> int:
+    def __init__(self,x: int) -> int:
+        self.x=x
+    def checking(self):
         s=''
-        while x>0:
-            n=x
-            if n<0:
-                s+='-'
-            n%=10
-            s+=str(n)
-            x//=10
+        while self.x>0:
+                n=self.x
+                n%=10
+                s+=str(n)
+                self.x//=10
         return s
-    
-p=Solution()
-print(p.reverse(x=-123))
+    def reverse(self):
+        s=''
+        if self.x==0:
+            s+='0'
+        elif self.x<0 and str(self.x)[-1]=='0' :
+            s+='-'
+            self.x=-self.x
+            self.x//=10
+            self.checking()
 
-        
+        elif self.x<0 :
+            s+='-'
+            self.x=-self.x
+            self.checking()
+        elif str(self.x)[-1]=='0':
+            self.x//=10
+            self.checking()
+            
+        else:
+            self.checking()
+
+        return s
+
+p=Solution(x=123)
+print(p.reverse())
+
 --------------------------------------
 
 def factorial(): 
