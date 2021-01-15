@@ -9,7 +9,7 @@ class Solution:
             else:
                 return False
         else:
-            print('Белгіленген шектен асып кетті')
+            return 'Белгіленген шектен асып кетті'
 
 p=Solution()
 print(p.isPalindrome(121))
