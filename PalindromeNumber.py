@@ -14,4 +14,5 @@ class Solution:
 p=Solution()
 print(p.isPalindrome(121))
 print(p.isPalindrome(-121))
+print(p.isPalindrome(10**35))
              
