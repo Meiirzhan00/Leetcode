@@ -17,3 +17,6 @@ class Solution:
             result = 0
         
         return result
+
+p=Solution()
+print(p.reverse(1245125))
